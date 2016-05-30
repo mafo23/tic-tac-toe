@@ -5,7 +5,7 @@
 class Display
 {
     public:
-        void playTurn(Game * game);
+        void printBoard(Game * game);
         //Display();
         //~Display();
 };
