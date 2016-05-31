@@ -2,8 +2,7 @@
 #define DISPLAY_H
 #include "game.h"
 
-class Display
-{
+class Display {
     public:
         void printBoard(Game * game);
         //Display();

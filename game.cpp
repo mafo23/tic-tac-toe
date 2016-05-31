@@ -18,7 +18,9 @@ char Game::getTurn() {
 }
 
 int Game::makeMove(int move) {
-    if (board[move] != '\0') return -1;
+    if (board[move] != '\0') {
+        return -1;
+    }
     board[move] = turn;
     if (turn == 'x') {
         turn = 'o';
@@ -27,6 +29,7 @@ int Game::makeMove(int move) {
     }
     ++moveCounter;
     isWon();
+
     return 0;
 }
 
@@ -47,6 +50,9 @@ void Game::isWon() {
         winner = board[0];
     } else if (board[2] == board[4] && board[4] == board[6] && board[2] != '\0') { // Right-Top to Left-Bottom Diagonal
         winner = board[2];
+    } else if (board[0] != '\0' && board[1] != '\0' && board[2] != '\0' && board[3] != '\0' && board[4] != '\0' &&
+               board[5] != '\0' && board[6] != '\0' && board[7] != '\0' && board[8] != '\0') {
+        winner = 'n';
     }
 }
 

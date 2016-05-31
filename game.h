@@ -1,8 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 
-class Game
-{
+class Game {
     private:
         char board[9];
         int moveCounter;
