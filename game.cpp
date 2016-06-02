@@ -64,3 +64,12 @@ Game::Game() {
     winner = '\0';
     moveCounter = 0;
 }
+
+Game::Game(const Game &obj) {
+    for (int i = 0; i < 9; ++i) {
+        board[i] = obj.board[i];
+    }
+    turn = obj.turn;
+    winner = obj.winner;
+    moveCounter = obj.moveCounter;
+}

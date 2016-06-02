@@ -15,6 +15,7 @@ class Game {
         int makeMove(int move);
         void isWon();
         Game();
+        Game(const Game &obj);
         //~Game();
 };
 
